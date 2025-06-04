@@ -72,7 +72,7 @@ int main() {
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("\n%s-%s\nCódigo%s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e1cidade, e1sigla,e1sigla,e1codigo, e1populacao, e1area, e1pib, e1pontosturisticos);
-    printf("\n%s-%s\nCódigo%s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos);
+    printf("\n%s-%s\nCódigo: %s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e1cidade, e1sigla,e1sigla,e1codigo, e1populacao, e1area, e1pib, e1pontosturisticos);
+    printf("\n%s-%s\nCódigo: %s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos);
     return 0;
 }
