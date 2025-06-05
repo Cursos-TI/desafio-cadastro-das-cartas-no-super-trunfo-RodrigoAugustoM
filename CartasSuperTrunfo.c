@@ -42,25 +42,25 @@ int main() {
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     printf("\nRegistre a primeira carta,\n%s\n %s\n%s",sde,siglas, dgaq);
     scanf("%s", e1sigla);
-    printf("%s\n %s ",cdc,dgaq);
-    scanf("%s",e1codigo);
     printf("%s%s? \n%s", qndc, e1sigla, dgaq);
     scanf(" %s", e1cidade);
-    printf("%s%s/%s?\n%s",qppd, e1cidade, e1sigla, dgaq);
+    printf("%s\n%s ",cdc,dgaq);
+    scanf("%s",e1codigo);
+    printf(" %s%s/%s?\n%s",qppd, e1cidade, e1sigla, dgaq);
     scanf("%d", &e1populacao);
-    printf("%s%s/%s?\n%s",qard,e1cidade, e1sigla, dgaq);
+    printf(" %s%s/%s?\n%s",qard,e1cidade, e1sigla, dgaq);
     scanf("%f", &e1area);
-    printf("%s%s/%s?\n%s",qpbd,e1cidade, e1sigla, dgaq);
+    printf(" %s%s/%s?\n%s",qpbd,e1cidade, e1sigla, dgaq);
     scanf("%f", &e1pib);
-    printf("%s%s/%s%s\n%s", qptd, e1cidade, e1sigla, possui,dgaq);
+    printf(" %s%s/%s%s\n%s", qptd, e1cidade, e1sigla, possui,dgaq);
     scanf("%d", &e1pontosturisticos);
 
     printf("\nRegistre a segunda carta,\n%s\n %s\n%s",sde,siglas, dgaq);
     scanf("%s", e2sigla);
-    printf("%s\n %s ",cdc,dgaq);
-    scanf("%s",e2codigo);
     printf("%s%s? \n%s", qndc, e2sigla, dgaq);
     scanf("%s", e2cidade);
+    printf("%s\n%s ",cdc,dgaq);
+    scanf("%s",e2codigo);
     printf("%s%s/%s?\n%s",qppd,e2cidade, e2sigla, dgaq);
     scanf("%d", &e2populacao);
     printf("%s%s/%s?\n%s",qard,e2cidade, e2sigla, dgaq);
@@ -83,6 +83,21 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     printf("\n%s-%s\nCódigo: %s%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %2d\nPIB per capta: R$ %.2f\nDensidade populacional: %.2f\n", e1cidade, e1sigla,e1sigla,e1codigo, e1populacao, e1area, e1pib, e1pontosturisticos,e1pibPerCapta,e1densidadePopulacional);
     printf("\n%s-%s\nCódigo: %s%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %2d\nPIB per capta: R$%.2f\nDensidade populacional: %.2f\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos,e2pibPerCapta,e2densidadePopulacional);
+    if (e1pibPerCapta > e2pibPerCapta) 
+    {
+        printf("%s-%s venceu!\n",e1cidade,e1sigla);
+    }
+    else
+    {
+        if(e1pibPerCapta < e2pibPerCapta)
+        {
+                    printf("%s-%s venceu!\n",e1cidade,e1sigla);
+
+        } else 
+        {
+            printf("Empate\n");
+        }
+    }
     
     return 0;
 }
