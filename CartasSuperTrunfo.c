@@ -35,13 +35,14 @@ int main() {
     char qpbd[30] = "Qual o PIB de ";
     char qptd[30] = "Quantos pontos turisticos ";
     char possui[20] =" possui?";
+
     
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
     printf("\nRegistre a primeira carta,\n%s\n %s\n%s",sde,siglas, dgaq);
     scanf("%s", e1sigla);
-    printf("%s",cdc);
+    printf("%s\n %s ",cdc,dgaq);
     scanf("%d",&e1codigo);
     printf("%s%s? \n%s", qndc, e1sigla, dgaq);
     scanf(" %s", e1cidade);
@@ -56,7 +57,7 @@ int main() {
 
     printf("\nRegistre a segunda carta,\n%s\n %s\n%s",sde,siglas, dgaq);
     scanf("%s", e2sigla);
-    printf("%s",cdc);
+    printf("%s\n %s ",cdc,dgaq);
     scanf("%d",&e2codigo);
     printf("%s%s? \n%s", qndc, e2sigla, dgaq);
     scanf("%s", e2cidade);
@@ -68,11 +69,20 @@ int main() {
     scanf("%f", &e2pib);
     printf("%s%s/%s%s\n%s",qptd,e2cidade, e2sigla, possui,dgaq);
     scanf("%d", &e2pontosturisticos);
+
+    //variaveis para as comparações
+    float e1densidadePopulacional = e1populacao / e1area;
+    float e1pibPerCapta = e1pib / e1populacao;
+
+    float e2densidadePopulacional = e2populacao / e2area;
+    float e2pibPerCapta = e2pib / e2populacao;
+    
   
     // Exibição dos Dados das Cartas:
     // Sugestão: Utilize a função printf para exibir as informações das cartas cadastradas de forma clara e organizada.
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
-    printf("\n%s-%s\nCódigo: %s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e1cidade, e1sigla,e1sigla,e1codigo, e1populacao, e1area, e1pib, e1pontosturisticos);
-    printf("\n%s-%s\nCódigo: %s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos);
+    printf("\n%s-%s\nCódigo: %s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\nPIB per capta: R$ %.2f\nDensidade populacional: %.2f\n", e1cidade, e1sigla,e1sigla,e1codigo, e1populacao, e1area, e1pib, e1pontosturisticos,e1pibPerCapta,e1densidadePopulacional);
+    printf("\n%s-%s\nCódigo: %s%d\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %d\nPIB per capta: R$%.2f\nDensidade populacional: %.2f\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos,e2pibPerCapta,e2densidadePopulacional);
+    
     return 0;
 }
