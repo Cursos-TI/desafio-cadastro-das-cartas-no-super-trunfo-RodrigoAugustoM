@@ -85,19 +85,20 @@ int main() {
     printf("\n%s-%s\nCódigo: %s%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %2d\nPIB per capta: R$%.2f\nDensidade populacional: %.2f\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos,e2pibPerCapta,e2densidadePopulacional);
     if (e1pibPerCapta > e2pibPerCapta) 
     {
-        printf("%s-%s venceu!\n",e1cidade,e1sigla);
+        printf("\nComparação de cartas por PIB per capta\nPIB per capta de %s-%s: %.2f \nPIB per capta de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1pibPerCapta,e2cidade,e2sigla,e2pibPerCapta,e1cidade,e1sigla);
     }
     else
     {
         if(e1pibPerCapta < e2pibPerCapta)
         {
-                    printf("%s-%s venceu!\n",e1cidade,e1sigla);
+            printf("\nComparação de cartas por PIB per capta\nPIB per capta de %s-%s: %.2f \nPIB per capta de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1pibPerCapta,e2cidade,e2sigla,e2pibPerCapta,e2cidade,e2sigla);
 
         } else 
         {
             printf("Empate\n");
         }
     }
+    
     
     return 0;
 }
