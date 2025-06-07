@@ -1,4 +1,6 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 // Desafio Super Trunfo - Países
 // Tema 1 - Cadastro das Cartas
@@ -35,6 +37,8 @@ int main() {
     char qpbd[30] = "Qual o PIB de ";
     char qptd[30] = "Quantos pontos turisticos ";
     char possui[20] =" possui?";
+
+    int opcao = 0;
 
     
     // Cadastro das Cartas:
@@ -83,7 +87,83 @@ int main() {
     // Exiba os valores inseridos para cada atributo da cidade, um por linha.
     printf("\n%s-%s\nCódigo: %s%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %2d\nPIB per capta: R$ %.2f\nDensidade populacional: %.2f\n", e1cidade, e1sigla,e1sigla,e1codigo, e1populacao, e1area, e1pib, e1pontosturisticos,e1pibPerCapta,e1densidadePopulacional);
     printf("\n%s-%s\nCódigo: %s%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %2d\nPIB per capta: R$%.2f\nDensidade populacional: %.2f\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos,e2pibPerCapta,e2densidadePopulacional);
-    if (e1pibPerCapta > e2pibPerCapta) 
+    
+    printf("Selecione uma opção:\n1 para populaçao\n2 para area\n3 para PIB\n4 para Pontos turisticos\n5 para PIB per capta\n6 para Densidade populacional\n");
+    scanf("%d", &opcao);
+
+    switch (opcao)
+    {
+    case 1:
+        if (e1populacao > e2populacao) 
+    {
+        printf("\nComparação de cartas por População\nPopulação de %s-%s: %.2f \nPopulação de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1populacao,e2cidade,e2sigla,e2populacao,e1cidade,e1sigla);
+    }
+    else
+    {
+        if(e1populacao < e2populacao)
+        {
+            printf("\nComparação de cartas por População\nPopulação de %s-%s: %.2f \nPopulação de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1populacao,e2cidade,e2sigla,e2populacao,e2cidade,e2sigla);
+
+        } else 
+        {
+            printf("Empate\n");
+        }
+    }
+        break;
+    case 2:
+         if (e1area > e2area) 
+    {
+        printf("\nComparação de cartas por Área\nÁrea de %s-%s: %.2f \nÁrea de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1area,e2cidade,e2sigla,e2area,e1cidade,e1sigla);
+    }
+    else
+    {
+        if(e1area < e2area)
+        {
+            printf("\nComparação de cartas por Área\nÁrea de %s-%s: %.2f \nÁrea de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1area,e2cidade,e2sigla,e2area,e2cidade,e2sigla);
+
+        } else 
+        {
+            printf("Empate\n");
+        }
+    }
+        
+        break;
+    case 3:
+        if (e1pib > e2pib) 
+    {
+        printf("\nComparação de cartas por PIB\nPIB de %s-%s: %.2f \nPIB de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1pib,e2cidade,e2sigla,e2pib,e1cidade,e1sigla);
+    }
+    else
+    {
+        if(e1pib < e2pib)
+        {
+            printf("\nComparação de cartas por PIB\nPIB de %s-%s: %.2f \nPIB de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1pib,e2cidade,e2sigla,e2pib,e2cidade,e2sigla);
+
+        } else 
+        {
+            printf("Empate\n");
+        }
+    }
+        break;
+    case 4:
+        if (e1pontosturisticos > e2pontosturisticos) 
+    {
+        printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %.2f \nPontos turisticos de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1pontosturisticos,e2cidade,e2sigla,e2pontosturisticos,e1cidade,e1sigla);
+    }
+    else
+    {
+        if(e1pontosturisticos < e2pontosturisticos)
+        {
+            printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %.2f \nPontos turisticos de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1pontosturisticos,e2cidade,e2sigla,e2pontosturisticos,e2cidade,e2sigla);
+
+        } else 
+        {
+            printf("Empate\n");
+        }
+    }
+        break;
+    case 5:
+        if (e1pibPerCapta > e2pibPerCapta) 
     {
         printf("\nComparação de cartas por PIB per capta\nPIB per capta de %s-%s: %.2f \nPIB per capta de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1pibPerCapta,e2cidade,e2sigla,e2pibPerCapta,e1cidade,e1sigla);
     }
@@ -98,6 +178,36 @@ int main() {
             printf("Empate\n");
         }
     }
+        break;
+    case 6:
+        if (e1densidadePopulacional < e2densidadePopulacional) 
+    {
+        printf("\nComparação de cartas por Densidade populacional\nDensidade populacional de %s-%s: %.2f \nDensidade populacional de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1densidadePopulacional,e2cidade,e2sigla,e2densidadePopulacional,e1cidade,e1sigla);
+    }
+    else
+    {
+        if(e1densidadePopulacional > e2densidadePopulacional)
+        {
+            printf("\nComparação de cartas por Densidade populacional\nDensidade populacional de %s-%s: %.2f \nDensidade populacional de %s-%s: %.2f \n%s-%s Venceu!\n",e1cidade,e1sigla,e1densidadePopulacional,e2cidade,e2sigla,e2densidadePopulacional,e2cidade,e2sigla);
+
+        } else 
+        {
+            printf("Empate\n");
+        }
+    }
+        break;
+    
+    default:
+        printf("Opção invalida!\n");
+        break;
+    }
+    
+    
+    
+    
+    
+    
+    
     
     
     return 0;
