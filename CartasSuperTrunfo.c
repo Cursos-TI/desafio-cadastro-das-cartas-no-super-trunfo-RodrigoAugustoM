@@ -42,6 +42,10 @@ int main()
     int opcao1 = 0;
     int opcao2 = 0;
 
+    float e1soma = 0.0;
+    float e2soma = 0.0;
+
+
     // Cadastro das Cartas:
     // Sugestão: Utilize a função scanf para capturar as entradas do usuário para cada atributo.
     // Solicite ao usuário que insira as informações de cada cidade, como o código, nome, população, área, etc.
@@ -102,6 +106,8 @@ int main()
         switch (opcao1)
         {
         case 1:
+            e1soma = e1soma + e1populacao;
+            e2soma = e2soma + e2populacao;
             if (e1populacao > e2populacao)
             {
                 printf("\nComparação de cartas por População\nPopulação de %s-%s: %d \nPopulação de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e1cidade, e1sigla);
@@ -119,6 +125,8 @@ int main()
             }
             break;
         case 2:
+            e1soma = e1soma + e1area;
+            e2soma = e2soma + e1area;
             if (e1area > e2area)
             {
                 printf("\nComparação de cartas por Área\nÁrea de %s-%s: %.2f \nÁrea de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1area, e2cidade, e2sigla, e2area, e1cidade, e1sigla);
@@ -137,6 +145,8 @@ int main()
 
             break;
         case 3:
+            e1soma = e1soma + e1pib;
+            e2soma = e2soma + e2pib;
             if (e1pib > e2pib)
             {
                 printf("\nComparação de cartas por PIB\nPIB de %s-%s: %.2f \nPIB de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pib, e2cidade, e2sigla, e2pib, e1cidade, e1sigla);
@@ -154,6 +164,8 @@ int main()
             }
             break;
         case 4:
+            e1soma = e1soma + e1pontosturisticos;
+            e2soma = e2soma + e2pontosturisticos;
             if (e1pontosturisticos > e2pontosturisticos)
             {
                 printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %d \nPontos turisticos de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e1cidade, e1sigla);
@@ -171,6 +183,8 @@ int main()
             }
             break;
         case 5:
+            e1soma = e1soma + e1pibPerCapta;
+            e2soma = e2soma + e2pibPerCapta;
             if (e1pibPerCapta > e2pibPerCapta)
             {
                 printf("\nComparação de cartas por PIB per capta\nPIB per capta de %s-%s: %.2f \nPIB per capta de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pibPerCapta, e2cidade, e2sigla, e2pibPerCapta, e1cidade, e1sigla);
@@ -188,6 +202,8 @@ int main()
             }
             break;
         case 6:
+            e1soma = e1soma + e1densidadePopulacional;
+            e2soma = e2soma + e2densidadePopulacional;
             if (e1densidadePopulacional < e2densidadePopulacional)
             {
                 printf("\nComparação de cartas por Densidade populacional\nDensidade populacional de %s-%s: %.2f \nDensidade populacional de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1densidadePopulacional, e2cidade, e2sigla, e2densidadePopulacional, e1cidade, e1sigla);
@@ -212,15 +228,17 @@ int main()
         switch (opcao2)
         {
         case 1:
+            e1soma = e1soma + e1populacao;
+            e2soma = e2soma + e2populacao;
             if (e1populacao > e2populacao)
             {
-                printf("\nComparação de cartas por População\nPopulação de %s-%s: %.2f \nPopulação de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e1cidade, e1sigla);
+                printf("\nComparação de cartas por População\nPopulação de %s-%s: %d \nPopulação de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e1cidade, e1sigla);
             }
             else
             {
                 if (e1populacao < e2populacao)
                 {
-                    printf("\nComparação de cartas por População\nPopulação de %s-%s: %.2f \nPopulação de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e2cidade, e2sigla);
+                    printf("\nComparação de cartas por População\nPopulação de %s-%s: %d \nPopulação de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e2cidade, e2sigla);
                 }
                 else
                 {
@@ -229,6 +247,8 @@ int main()
             }
             break;
         case 2:
+            e1soma = e1soma + e1area;
+            e2soma = e2soma + e2area;
             if (e1area > e2area)
             {
                 printf("\nComparação de cartas por Área\nÁrea de %s-%s: %.2f \nÁrea de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1area, e2cidade, e2sigla, e2area, e1cidade, e1sigla);
@@ -247,6 +267,8 @@ int main()
 
             break;
         case 3:
+            e1soma = e1soma + e1pib;
+            e2soma = e2soma + e2pib;
             if (e1pib > e2pib)
             {
                 printf("\nComparação de cartas por PIB\nPIB de %s-%s: %.2f \nPIB de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pib, e2cidade, e2sigla, e2pib, e1cidade, e1sigla);
@@ -264,15 +286,17 @@ int main()
             }
             break;
         case 4:
+            e1soma = e1soma + e1pontosturisticos;
+            e2soma = e2soma + e2pontosturisticos;
             if (e1pontosturisticos > e2pontosturisticos)
             {
-                printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %.2f \nPontos turisticos de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e1cidade, e1sigla);
+                printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %d \nPontos turisticos de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e1cidade, e1sigla);
             }
             else
             {
                 if (e1pontosturisticos < e2pontosturisticos)
                 {
-                    printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %.2f \nPontos turisticos de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e2cidade, e2sigla);
+                    printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %d \nPontos turisticos de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e2cidade, e2sigla);
                 }
                 else
                 {
@@ -281,6 +305,8 @@ int main()
             }
             break;
         case 5:
+            e1soma = e1soma + e1pibPerCapta;
+            e2soma = e2soma + e2pibPerCapta;
             if (e1pibPerCapta > e2pibPerCapta)
             {
                 printf("\nComparação de cartas por PIB per capta\nPIB per capta de %s-%s: %.2f \nPIB per capta de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pibPerCapta, e2cidade, e2sigla, e2pibPerCapta, e1cidade, e1sigla);
@@ -298,6 +324,8 @@ int main()
             }
             break;
         case 6:
+            e1soma = e1soma + e1densidadePopulacional;
+            e2soma = e2soma + e2densidadePopulacional;
             if (e1densidadePopulacional < e2densidadePopulacional)
             {
                 printf("\nComparação de cartas por Densidade populacional\nDensidade populacional de %s-%s: %.2f \nDensidade populacional de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1densidadePopulacional, e2cidade, e2sigla, e2densidadePopulacional, e1cidade, e1sigla);
@@ -319,6 +347,7 @@ int main()
             printf("Opção invalida!\n");
             break;
         }
+        e1soma > e2soma ? printf("%s-%s Venceu na soma dos atributos!\n",e1cidade, e1sigla) : printf("%s-%s Venceu na soma dos atributos!\n",e2cidade, e2sigla);
     }
     return 0;
 }
