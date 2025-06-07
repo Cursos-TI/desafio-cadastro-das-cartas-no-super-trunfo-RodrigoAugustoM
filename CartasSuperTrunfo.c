@@ -90,7 +90,7 @@ int main()
 
     printf("Selecione uma opção:\n1 para População\n2 para Área\n3 para PIB\n4 para Pontos turisticos\n5 para PIB per capta\n6 para Densidade populacional\n");
     scanf("%d", &opcao1);
-    printf("Selecione uma segunda opção:\n1 para População\n2 para Área\n3 para PIB\n4 para Pontos turisticos\n5 para PIB per capta\n6 para Densidade populacional\nEla deve ser diferente de %d", opcao1);
+    printf("Selecione uma segunda opção:\n1 para População\n2 para Área\n3 para PIB\n4 para Pontos turisticos\n5 para PIB per capta\n6 para Densidade populacional\nEla deve ser diferente de %d\n", opcao1);
     scanf("%d", &opcao2);
     if (opcao1 == opcao2)
     {
@@ -104,13 +104,13 @@ int main()
         case 1:
             if (e1populacao > e2populacao)
             {
-                printf("\nComparação de cartas por População\nPopulação de %s-%s: %.2f \nPopulação de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e1cidade, e1sigla);
+                printf("\nComparação de cartas por População\nPopulação de %s-%s: %d \nPopulação de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e1cidade, e1sigla);
             }
             else
             {
                 if (e1populacao < e2populacao)
                 {
-                    printf("\nComparação de cartas por População\nPopulação de %s-%s: %.2f \nPopulação de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e2cidade, e2sigla);
+                    printf("\nComparação de cartas por População\nPopulação de %s-%s: %d \nPopulação de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1populacao, e2cidade, e2sigla, e2populacao, e2cidade, e2sigla);
                 }
                 else
                 {
@@ -156,13 +156,13 @@ int main()
         case 4:
             if (e1pontosturisticos > e2pontosturisticos)
             {
-                printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %.2f \nPontos turisticos de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e1cidade, e1sigla);
+                printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %d \nPontos turisticos de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e1cidade, e1sigla);
             }
             else
             {
                 if (e1pontosturisticos < e2pontosturisticos)
                 {
-                    printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %.2f \nPontos turisticos de %s-%s: %.2f \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e2cidade, e2sigla);
+                    printf("\nComparação de cartas por Pontos turisticos\nPontos turisticos de %s-%s: %d \nPontos turisticos de %s-%s: %d \n%s-%s Venceu!\n", e1cidade, e1sigla, e1pontosturisticos, e2cidade, e2sigla, e2pontosturisticos, e2cidade, e2sigla);
                 }
                 else
                 {
