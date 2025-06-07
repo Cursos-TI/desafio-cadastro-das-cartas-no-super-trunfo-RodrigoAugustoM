@@ -88,7 +88,7 @@ int main() {
     printf("\n%s-%s\nCódigo: %s%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %2d\nPIB per capta: R$ %.2f\nDensidade populacional: %.2f\n", e1cidade, e1sigla,e1sigla,e1codigo, e1populacao, e1area, e1pib, e1pontosturisticos,e1pibPerCapta,e1densidadePopulacional);
     printf("\n%s-%s\nCódigo: %s%s\nPopulação: %d\nArea: %.2f m²\nPIB: R$ %.2f\nPontos turisticos: %2d\nPIB per capta: R$%.2f\nDensidade populacional: %.2f\n", e2cidade, e2sigla,e2sigla,e2codigo, e2populacao, e2area, e2pib, e2pontosturisticos,e2pibPerCapta,e2densidadePopulacional);
     
-    printf("Selecione uma opção:\n1 para populaçao\n2 para area\n3 para PIB\n4 para Pontos turisticos\n5 para PIB per capta\n6 para Densidade populacional\n");
+    printf("Selecione uma opção:\n1 para População\n2 para Área\n3 para PIB\n4 para Pontos turisticos\n5 para PIB per capta\n6 para Densidade populacional\n");
     scanf("%d", &opcao);
 
     switch (opcao)
@@ -200,15 +200,6 @@ int main() {
     default:
         printf("Opção invalida!\n");
         break;
-    }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    }    
     return 0;
 }
